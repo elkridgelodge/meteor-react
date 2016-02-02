@@ -1,10 +1,12 @@
 import React from 'react'
 import {mount} from 'react-mounter'
 
-import BlogLayout from './layouts/blog.jsx'
+import MainLayout from './layouts/main.jsx'
 import PostList from './containers/post_list'
 import PostPage from './containers/post_page'
+import BlogTitles from './containers/blog_titles'
 
+/*
 FlowRouter.route("/", {
   name: "home",
   action() {
@@ -22,8 +24,10 @@ FlowRouter.route('/post/:_id', {
     })
   }
 })
+*/
 
 FlowRouter.route('/', {
+  name: "home",
   action() {
     mount(MainLayout, {
       content: <BlogTitlesContainer />

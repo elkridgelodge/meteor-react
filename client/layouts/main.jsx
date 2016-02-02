@@ -1,3 +1,5 @@
+import React from 'react'
+
 const resetBlog = () => {
   BlogSchema.mutate(`
     {reset}
@@ -14,9 +16,11 @@ MainLayout = ({content}) => (
   <div>
     <header>
       <h1>My Blog Post</h1>
-      <a href='/'>Home</a>
-      <a href='/add-post'>Add Post</a>
-      <button onClick={resetBlog}>Reset Blog</button>
+      <div className="navigation">
+        <a href='/'>Home</a>
+        <a href='/add-post'>Add Post</a>
+        <button onClick={resetBlog}>Reset Blog</button>
+      </div>
     </header>
     <div>
       {content}
@@ -27,3 +31,6 @@ MainLayout = ({content}) => (
   </div>
 );
 MainLayout.displayName = 'MainLayout';
+
+
+export default MainLayout
