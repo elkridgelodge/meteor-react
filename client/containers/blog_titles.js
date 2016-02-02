@@ -21,5 +21,5 @@ BlogTitlesContainer.query = `
   }
 `;
 
-export default composeWithTracker(composer)(BlogTitlesContainers)
+export default composeWithTracker(composer)(BlogTitlesContainer)
 
