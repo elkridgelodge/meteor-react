@@ -4,7 +4,9 @@ import {mount} from 'react-mounter'
 import MainLayout from './layouts/main.jsx'
 import PostList from './containers/post_list'
 import PostPage from './containers/post_page'
-import BlogTitles from './containers/blog_titles'
+import BlogTitlesContainer from './containers/blog_titles'
+//import BlogPostContainer from './containers/blog_post'
+//import AddBlogPostContainer from './containers/add_blog_post'
 
 /*
 FlowRouter.route("/", {
