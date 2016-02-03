@@ -1,3 +1,5 @@
+import BlogSchema from '../lib/0.start.js'
+
 import {compose} from 'react-komposer'
 //import {composeWithPromise} from 'react-komposer'
 import BlogTitles from '../components/3.blog_titles.jsx'

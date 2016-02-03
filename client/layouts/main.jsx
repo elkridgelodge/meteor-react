@@ -1,7 +1,8 @@
+import BlogSchema from '../lib/0.start.js'
 import BlogTitlesContainer from '../containers/blog_titles'
 import React from 'react'
 
-const resetBlog = () => {
+resetBlog = () => {
   BlogSchema.mutate(`
     {reset}
   `)
@@ -13,7 +14,7 @@ const resetBlog = () => {
   });
 };
 
-MainLayout = ({content}) => (
+const MainLayout = ({content}) => (
   <div>
     <header>
       <h1>My Blog Post</h1>

@@ -1,3 +1,5 @@
+import BlogSchema from '../lib/0.start.js'
+
 import {compose} from 'react-komposer'
 import BlogPost from '../components/2.blog_post.jsx'
 

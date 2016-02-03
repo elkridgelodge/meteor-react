@@ -1,1 +1,2 @@
-BlogSchema = GraphQL.createLokkaClient('Blog');
+const BlogSchema = GraphQL.createLokkaClient('Blog');
+export default BlogSchema

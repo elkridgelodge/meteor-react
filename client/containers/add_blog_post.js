@@ -1,8 +1,10 @@
+import BlogSchema from '../lib/0.start.js'
+
 import {composeWithPromise} from 'react-komposer'
 import BlogTitlesContainer from './blog_titles'
 import BlogPostContainer, {BlogPost} from './blog_post'
 //probably remove AddPost and its associated file and update the render function 
-import AddPost from '../components/4.add_post.jsx'
+//import AddPost from '../components/4.add_post.jsx'
 
 const AddBlogPostContainer = class AddBlogPostContainer extends React.Component {
   constructor(props, context) {

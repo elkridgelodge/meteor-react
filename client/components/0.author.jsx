@@ -1,3 +1,4 @@
+import BlogSchema from '../lib/0.start.js'
 import React from 'react'
 
 const Author = ({author}) => (

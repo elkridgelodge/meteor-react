@@ -1,3 +1,5 @@
+import BlogSchema from '../lib/0.start.js'
+
 import React from 'react'
 import BlogPost from './2.blog_post.jsx'
 import Author from './0.author.jsx'
