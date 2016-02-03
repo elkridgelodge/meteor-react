@@ -1,5 +1,7 @@
 import BlogSchema from '../lib/0.start.js'
-import BlogTitlesContainer from '../containers/blog_titles'
+
+import {compose} from 'react-komposer'
+import BlogTitlesContainer, {query} from '../containers/blog_titles'
 import React from 'react'
 
 resetBlog = () => {
