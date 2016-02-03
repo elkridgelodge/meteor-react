@@ -1,4 +1,6 @@
-Author = ({author}) => (
+import React from 'react'
+
+const Author = ({author}) => (
   <span>
     {author.name}
   </span>
@@ -11,3 +13,5 @@ Author.fragment = BlogSchema.createFragment(`
     name
   }
 `);
+
+export default Author

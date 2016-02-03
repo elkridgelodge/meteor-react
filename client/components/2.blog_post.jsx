@@ -1,4 +1,7 @@
-BlogPost = ({post}) => (
+import React from 'react'
+import Author from './0.author.jsx'
+
+const BlogPost = ({post}) => (
   <div id={`post-${post._id}`} className="post">
     {(post.saving)? <p>Still saving...</p>: null}
     <h2>{post.title}</h2>
@@ -27,3 +30,5 @@ BlogPost.fragment = BlogSchema.createFragment(`
     }
   }
 `);
+
+export default BlogPost

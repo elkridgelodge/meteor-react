@@ -1,4 +1,6 @@
-BlogPostContainer = GraphQL.bindData((props, onData) => {
+import BlogPost from '../components/2.blog_post.jsx'
+
+const BlogPostContainer = GraphQL.bindData((props, onData) => {
   const vars = {postId: props.postId};
   return BlogSchema.watchQuery(BlogPostContainer.query, vars, onData);
 })(BlogPost);

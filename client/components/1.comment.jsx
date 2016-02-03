@@ -1,4 +1,7 @@
-Comment = ({comment}) => (
+import React from 'react'
+import Author from './0.author.jsx'
+
+const Comment = ({comment}) => (
   <div>
     <Author author={comment.author}/>: {comment.text}
   </div>
@@ -14,3 +17,5 @@ Comment.fragment = BlogSchema.createFragment(`
     }
   }
 `);
+
+export default Comment
