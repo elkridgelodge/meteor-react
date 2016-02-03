@@ -1,3 +1,4 @@
+import BlogTitlesContainer from '../containers/blog_titles'
 import React from 'react'
 
 const resetBlog = () => {

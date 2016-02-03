@@ -1,8 +1,19 @@
-AddBlogPostContainer = class AddBlogPostContainer extends React.Component {
+import {composeWithPromise} from 'react-komposer'
+import BlogTitlesContainer from './blog_titles'
+import BlogPostContainer, {BlogPost} from './blog_post'
+//probably remove AddPost and its associated file and update the render function 
+import AddPost from '../components/4.add_post.jsx'
+
+const AddBlogPostContainer = class AddBlogPostContainer extends React.Component {
   constructor(props, context) {
     super(props, context);
   }
 
+  render() {
+//  return '<div><h2>Add New Post React Way</h2><button onClick={this.addPost.bind(this)}>Add Post</button></div>'
+    return '<AddPost />'
+  }
+/*
   render() {
     return (
       <div>
@@ -11,7 +22,7 @@ AddBlogPostContainer = class AddBlogPostContainer extends React.Component {
       </div>
     );
   }
-
+*/
   addPost() {
     const _id = Random.id();
     const title = `New Post: ${_id}`;
@@ -65,3 +76,5 @@ AddBlogPostContainer = class AddBlogPostContainer extends React.Component {
     FlowRouter.go(`/post/${_id}`);
   }
 }
+
+export default composeWithPromise(BlogSchema.mutate)(AddBlogPostContainer)
