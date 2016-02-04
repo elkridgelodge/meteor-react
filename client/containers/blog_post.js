@@ -8,7 +8,7 @@ const BlogPostContainer = GraphQL.bindData((props, onData) => {
   return BlogSchema.watchQuery(BlogPostContainer.query, vars, onData);
 })(BlogPost);
 
-function BlogPostContainerComposer(props, onData) {
+
   BlogPostContainer.query = `
     query _($postId: String!){
       post(_id: $postId) {
@@ -16,6 +16,6 @@ function BlogPostContainerComposer(props, onData) {
       }
     }
   `;
-}
 
-export default compose(BlogPostContainerComposer)(BlogPostContainer)
+
+export default compose(BlogPostContainer)(BlogPost)
