@@ -1,5 +1,6 @@
 import BlogSchema from '../lib/0.start.js'
 
+import {useDeps} from 'react-simple-di'
 import {composeWithPromise} from 'react-komposer'
 import BlogTitlesContainer from './blog_titles'
 import BlogPostContainer, {BlogPost} from './blog_post'
