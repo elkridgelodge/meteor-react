@@ -4,7 +4,12 @@ import {compose} from 'react-komposer'
 //import {composeWithPromise} from 'react-komposer'
 import BlogTitles from '../components/3.blog_titles.jsx'
 
-function composer(props, onData) {
+
+
+const BlogTitlesContainer = GraphQL.bindData((props, onData) => {
+  return BlogSchema.watchQuery(BlogTitlesContainer.query, onData)
+})(BlogTitles);
+
   BlogTitlesContainer.query = `
   {
     posts {
@@ -12,10 +17,6 @@ function composer(props, onData) {
     }
   }
 `;
-}
 
-const BlogTitlesContainer = GraphQL.bindData((props, onData) => {
-  return BlogSchema.watchQuery(BlogTitlesContainer.query, onData)
-})(BlogTitles);
 
-export default compose(composer)(BlogTitlesContainer)
+export default compose(BlogTitlesContainer)(BlogTitles)
